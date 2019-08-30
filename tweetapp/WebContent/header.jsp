@@ -5,11 +5,12 @@
 
 <header>
 		<div class="right">
-			<s:form action= "TextAction">
-				<s:submit value="投稿一覧"/>
-			</s:form>
+			<a href="<s:url action='HomeAction'/>">HOME</a>
 		</div>
 		<div class="left">
+		    <s:form action= "TextListAction">
+				<s:submit value="投稿一覧"/>
+			</s:form>
 			<s:if test="#session.loginFlag == null">
 				<s:form action="GoLoginAction">
 					<s:submit value="ログイン"/>
@@ -18,6 +19,9 @@
 			<s:else>
 				<s:form action ="LogoutAction">
 					<s:submit value="ログアウト"/>
+				</s:form>
+				<s:form action ="TextAction">
+					<s:submit value="投稿"/>
 				</s:form>
 			</s:else>
 		</div>

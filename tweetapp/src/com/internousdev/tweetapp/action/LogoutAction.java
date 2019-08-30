@@ -9,8 +9,9 @@ import com.opensymphony.xwork2.ActionSupport;
 public class LogoutAction extends ActionSupport implements SessionAware{
 
 	private Map<String,Object>session;
+
 	public String execute(){
-		UserInfoDAO userInfoDAO=new UserInfoDAO();
+		UserInfoDAO userInfoDAO = new UserInfoDAO();
 		int count = userInfoDAO.logout(session.get("loginId").toString(),session.get("loginPass").toString());
 		if(count>0){
 			session.clear();

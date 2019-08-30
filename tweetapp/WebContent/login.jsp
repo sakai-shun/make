@@ -14,17 +14,17 @@
 			<h2>ログイン画面</h2>
 		</div>
 
-		<s:if test="userIdErrorMessageList!=null && userIdErrorMessageList.size()>0">
+		<s:if test="loginIdErrorMessageList!=null && loginIdErrorMessageList.size()>0">
 			<div class="error">
 				<div class="error-message">
-					<s:iterator value="userIdErrorMessageList"><s:property/><br></s:iterator>
+					<s:iterator value="loginIdErrorMessageList"><s:property/><br></s:iterator>
 				</div>
 			</div>
 		</s:if>
-		<s:if test="passwordErrorMessageList!=null && passwordErrorMessageList.size()>0">
+		<s:if test="loginPassErrorMessageList!=null && loginPassErrorMessageList.size()>0">
 			<div class="error">
 				<div class="error-message">
-					<s:iterator value="passwordErrorMessageList"><s:property/><br></s:iterator>
+					<s:iterator value="loginPassErrorMessageList"><s:property/><br></s:iterator>
 				</div>
 			</div>
 		</s:if>
@@ -39,11 +39,11 @@
 			<table>
 				<tr>
 					<td><label>ログインID</label></td>
-					<td><input type="text" name="userId" value=""></td>
+					<td><input type="text" name="loginId" value=""></td>
 				</tr>
 				<tr>
 					<td><label>パスワード</label></td>
-					<td><input type="text" name="password" value=""></td>
+					<td><input type="text" name="loginPass" value=""></td>
 				</tr>
 				<tr>
 					<td></td>

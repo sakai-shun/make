@@ -18,6 +18,30 @@
 		<action name="CreateUserCompleteAction" class="com.internousdev.tweetapp.action.CreateUserCompleteAction" method="execute">
 			<result name="success">createUserComplete.jsp</result>
 		</action>
+		<action name="LoginAction" class="com.internousdev.tweetapp.action.LoginAction" method="execute">
+			<result name="success">home.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+		<action name="LogoutAction" class="com.internousdev.tweetapp.action.LogoutAction" method="execute">
+			<result name="success">home.jsp</result>
+		</action>
+		<action name="HomeAction" class="com.internousdev.tweetapp.action.HomeAction" method="execute">
+			<result name="success">home.jsp</result>
+		</action>
+		<action name="TextAction" class="com.internousdev.tweetapp.action.TextAction" method="execute">
+			<result name="success">text.jsp</result>
+		</action>
+		<action name="TextCompleteAction" class="com.internousdev.tweetapp.action.TextCompleteAction" method="execute">
+			<result name="success">textComplete.jsp</result>
+			<result name="error">text.jsp</result>
+		</action>
+		<action name="TextListAction" class="com.internousdev.tweetapp.action.TextListAction" method="execute">
+			<result name="success">textList.jsp</result>
+			<result name="list">textUserList.jsp</result>
+		</action>
+		<action name="DeleteTextAction" class="com.internousdev.tweetapp.action.DeleteTextAction" method="execute">
+			<result name="success">DeleteComplete.jsp</result>
+		</action>
 
 	</package>
 

@@ -72,7 +72,7 @@ public class UserInfoDAO {
 		Connection con=db.getConnection();
 
 		int count = 0;
-		String sql="update user_info set login_flag=1 where login_id=?";
+		String sql="update user_info set login_flag=1 where login_id=? and login_pass=?";
 
 		try{
 			PreparedStatement ps= con.prepareStatement(sql);
@@ -155,7 +155,7 @@ public class UserInfoDAO {
 		Connection con=db.getConnection();
 
 		int count = 0;
-		String sql="update user_info set login_flag=0 where login_id=?";
+		String sql="update user_info set login_flag=0 where login_id=? and login_pass=?";
 
 		try{
 			PreparedStatement ps= con.prepareStatement(sql);
@@ -173,5 +173,60 @@ public class UserInfoDAO {
 			}
 		}
 		return count;
+	}
+	public UserInfoDTO getUserName(String loginId){
+		DBConnector db = new DBConnector();
+		Connection con = db.getConnection();
+		UserInfoDTO userInfoDTO=new UserInfoDTO();
+
+		String sql="select user_name from user_info where login_id=?";
+
+		try{
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, loginId);
+
+			ResultSet rs=ps.executeQuery();
+
+			if(rs.next()){
+				userInfoDTO.setUserName(rs.getString("user_name"));
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally{
+			try{
+				con.close();
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+		return userInfoDTO;
+	}
+	public boolean isExsitsLoginUser(){
+		DBConnector db = new DBConnector();
+		Connection con = db.getConnection();
+
+		boolean result = false;
+		String sql="select count(*) as count from user_info where login_flag = 1";
+
+		try{
+			PreparedStatement ps=con.prepareStatement(sql);
+			ResultSet rs=ps.executeQuery();
+
+			while(rs.next()){
+				if(rs.getInt("count")>0){
+					result = true;
+				}
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			try{
+				con.close();
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+		return result;
+
 	}
 }

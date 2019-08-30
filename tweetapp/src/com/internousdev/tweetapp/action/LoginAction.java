@@ -5,6 +5,7 @@ import java.util.Map;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.tweetapp.dao.UserInfoDAO;
+import com.internousdev.tweetapp.dto.UserInfoDTO;
 import com.internousdev.tweetapp.util.InputChecker;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -28,9 +29,19 @@ public class LoginAction extends ActionSupport implements SessionAware{
 			return result;
 		}
 		UserInfoDAO userInfoDAO = new UserInfoDAO();
-		if(userInfoDAO.isExistsUserInfo(loginId,loginPass)
-				&& userInfoDAO.updateLoginFlag(loginId, loginPass) >0){
+		UserInfoDTO userInfoDTO = new UserInfoDTO();
+		if(userInfoDAO.isExistsUserInfo(loginId,loginPass)){
+
+
+				userInfoDAO.updateLoginFlag(loginId, loginPass);
+				userInfoDTO = userInfoDAO.getUserName(loginId);
+
+				session.put("loginId", loginId);
+				session.put("loginPass",loginPass);
+				session.put("userName", userInfoDTO.getUserName());
+				session.put("loginFlag", 1);
 			result = SUCCESS;
+
 		}else{
 			isNotUserInfoMessage ="ユーザーIDまたはパスワードが異なります。";
 		}

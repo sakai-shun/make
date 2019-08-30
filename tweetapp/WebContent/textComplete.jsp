@@ -5,18 +5,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="0;URL='LoginAction'"/>
-<title>新規登録完了</title>
+<title>テキスト完了</title>
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-	<div class="main">
-		<div class="title">
-			<h1>新規登録完了画面</h1>
-		</div>
-		<div class="message">
-			<p>新規登録完了しました。</p>
-		</div>
+<div class="main">
+	<div class="title">
+		<h1>投稿完了画面</h1>
 	</div>
+	<div class="message">
+		<p>投稿完了しました。</p>
+	</div>
+</div>
 </body>
 </html>

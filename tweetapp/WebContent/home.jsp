@@ -16,7 +16,6 @@
 		</div>
 		<div class="content">
 			<p>つぶやこう</p><br>
-			<p>日頃の鬱憤を</p>
 		</div>
 	</div>
 </body>
