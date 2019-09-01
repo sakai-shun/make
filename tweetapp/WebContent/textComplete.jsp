@@ -5,13 +5,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="./css/header.css">
 <title>テキスト完了</title>
 </head>
 <body>
 <jsp:include page="header.jsp"/>
 <div class="main">
 	<div class="title">
-		<h1>投稿完了画面</h1>
+		<h1>TextComplete</h1>
 	</div>
 	<div class="message">
 		<p>投稿完了しました。</p>

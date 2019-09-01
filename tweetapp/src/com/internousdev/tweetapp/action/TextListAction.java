@@ -23,13 +23,16 @@ public class TextListAction extends ActionSupport implements SessionAware{
 		UserInfoDTO userInfoDTO = new UserInfoDTO();
 		String result = SUCCESS;
 
-		if(userInfoDAO.isExsitsLoginUser()){
+		if(session.containsKey("loginFlag")){
+			
 			userInfoDTO = userInfoDAO.getUserName(session.get("loginId").toString());
 			textInfoList = textInfoDAO.getTextInfo(userInfoDTO.getUserName());
 			result = "list";
-		}else{
+			}
+		if(textInfoList==null){
 			textInfoAllList = textInfoDAO.getTextInfoAll();
-		}
+			}
+
 		return result;
 	}
 	public List<TextInfoDTO> getTextInfoAllList() {

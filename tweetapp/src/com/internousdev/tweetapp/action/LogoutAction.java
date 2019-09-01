@@ -15,6 +15,7 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 		int count = userInfoDAO.logout(session.get("loginId").toString(),session.get("loginPass").toString());
 		if(count>0){
 			session.clear();
+			session.put("logoutFlag", "1");
 		}
 		return SUCCESS;
 	}

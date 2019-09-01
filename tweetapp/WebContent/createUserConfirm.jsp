@@ -5,13 +5,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="./css/header.css">
 <title>新規登録確認</title>
 </head>
 <body>
 <jsp:include page="header.jsp"/>
 	<div class="main">
 		<div class="title">
-			<h1>新規登録確認画面</h1>
+			<h1>CreateUserConfirm</h1>
 		</div>
 		<table>
 			<tr>
@@ -28,10 +29,10 @@
 			</tr>
 		</table>
 		<s:form action="CreateUserCompleteAction">
-			<s:submit value="登録"/>
+			<s:submit value="Create"/>
 		</s:form>
 		<s:form action="CreateUserAction">
-			<s:submit value="戻る"/>
+			<s:submit value="Back"/>
 			<s:hidden name="backFlag" value="1"/>
 		</s:form>
 	</div>

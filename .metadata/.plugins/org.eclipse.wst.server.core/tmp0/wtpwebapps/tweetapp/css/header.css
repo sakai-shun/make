@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+.header{
+	background-color:rgba(34,49,52,0.7);
+	width:100%;
+	height:60px;
+	margin:0;
+}
+.left{
+	float:left;
+}
+.left a{
+	display:inline-block;
+	color:white;
+	text-decoration:none;
+	margin-top:10px;
+	margin-left:20px;
+	font-size:20px;
+}
+.right{
+	float:right;
+}
+.btn{
+	display:inline-block;
+	border-radius:7px;
+	width:70px;
+	height:20px;
+	margin-right:10px;	
+}
+.btn:hover{
+	background-color:skyblue;
+	opacity:0.8;
+}
+li{
+	list-style:none;
+	float:left;
+}

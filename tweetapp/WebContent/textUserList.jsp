@@ -5,13 +5,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="./css/header.css">
 <title>テキストユーザーリスト</title>
 </head>
 <body>
 <jsp:include page="header.jsp"/>
 	<div class="main">
 		<div class="title">
-			<h1>テキストユーザーリスト画面</h1>
+			<h1>TextUserList</h1>
 		</div>
 		<s:if test="textInfoList != null && textInfoList.size()>0">
 		<table>
@@ -20,8 +21,8 @@
 					<td><s:property value="userName"/></td>
 					<td>
 						<s:property value="content"/>
-						<a href="<s:url action ='TextAction'><s:param name="id" value="%{id}"/><s:param name="editFlag" value="1"/></s:url>">編集</a>
-						<a href="<s:url action ='DeleteTextAction'><s:param name="id" value="%{id}"/></s:url>">削除</a>
+						<a href="<s:url action ='TextAction'><s:param name="id" value="%{id}"/><s:param name="editFlag" value="1"/></s:url>">Edit</a>
+						<a href="<s:url action ='DeleteTextAction'><s:param name="id" value="%{id}"/></s:url>">Delete</a>
 					</td>
 				</tr>
 			</s:iterator>

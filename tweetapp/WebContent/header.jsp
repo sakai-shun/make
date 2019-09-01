@@ -4,27 +4,31 @@
 
 
 <header>
-		<div class="right">
-			<a href="<s:url action='HomeAction'/>">HOME</a>
-		</div>
+	<div class="header">
 		<div class="left">
-		    <s:form action= "TextListAction">
-				<s:submit value="投稿一覧"/>
-			</s:form>
+			<a href="<s:url action='HomeAction'/>">TweetApp</a>
+		</div>
+		<div class="right">
+		<ul>
+		    <li><s:form action= "TextListAction">
+				<s:submit class="btn" value="TextList"/>
+			</s:form></li>
 			<s:if test="#session.loginFlag == null">
-				<s:form action="GoLoginAction">
-					<s:submit value="ログイン"/>
-				</s:form>
+				<li><s:form action="GoLoginAction">
+						<s:submit class="btn" value="Login"/>
+				</s:form></li>
 			</s:if>
 			<s:else>
-				<s:form action ="LogoutAction">
-					<s:submit value="ログアウト"/>
-				</s:form>
-				<s:form action ="TextAction">
-					<s:submit value="投稿"/>
-				</s:form>
+				<li><s:form action ="LogoutAction">
+					<s:submit class="btn" value="Logout"/>
+				</s:form></li>
+				<li><s:form action ="TextAction">
+					<s:submit class="btn" value="Post"/>
+				</s:form></li>
 			</s:else>
+		</ul>
 		</div>
-
+	</div>
+		
 </header>
 

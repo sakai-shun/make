@@ -5,13 +5,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="./css/header.css">
 <title>Login画面</title>
 </head>
 <body>
 	<jsp:include page="header.jsp"/>
 	<div class="main">
 		<div class="title">
-			<h2>ログイン画面</h2>
+			<h2>Login</h2>
 		</div>
 
 		<s:if test="loginIdErrorMessageList!=null && loginIdErrorMessageList.size()>0">
@@ -47,14 +48,14 @@
 				</tr>
 				<tr>
 					<td></td>
-					<td><s:submit value="ログイン"/></td>
+					<td><s:submit value="Login"/></td>
 				</tr>
 
 			</table>
 
 		</s:form>
 			<s:form action="CreateUserAction">
-				<s:submit value="新規ユーザー登録"/>
+				<s:submit value="CreateUser"/>
 			</s:form>
 
 	</div>

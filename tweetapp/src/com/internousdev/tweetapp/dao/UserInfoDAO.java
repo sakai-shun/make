@@ -201,32 +201,4 @@ public class UserInfoDAO {
 		}
 		return userInfoDTO;
 	}
-	public boolean isExsitsLoginUser(){
-		DBConnector db = new DBConnector();
-		Connection con = db.getConnection();
-
-		boolean result = false;
-		String sql="select count(*) as count from user_info where login_flag = 1";
-
-		try{
-			PreparedStatement ps=con.prepareStatement(sql);
-			ResultSet rs=ps.executeQuery();
-
-			while(rs.next()){
-				if(rs.getInt("count")>0){
-					result = true;
-				}
-			}
-		}catch(Exception e){
-			e.printStackTrace();
-		}finally{
-			try{
-				con.close();
-			}catch(Exception e){
-				e.printStackTrace();
-			}
-		}
-		return result;
-
-	}
 }

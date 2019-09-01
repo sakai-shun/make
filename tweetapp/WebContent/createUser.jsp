@@ -5,13 +5,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="./css/header.css">
 <title>新規登録</title>
 </head>
 <body>
 	<jsp:include page="header.jsp"/>
 	<div class="main">
 		<div class="title">
-			<h2>新規登録画面</h2>
+			<h2>CreateUser</h2>
 		</div>
 
 		<s:form action="CreateUserConfirmAction">
@@ -58,7 +59,7 @@
 				</tr>
 			</table>
 			<div class="submit_btn">
-				<s:submit value="確認" class="btn"/>
+				<s:submit value="Confirm" class="btn"/>
 			</div>
 		</s:form>
 	</div>

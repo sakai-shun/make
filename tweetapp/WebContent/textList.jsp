@@ -5,13 +5,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="./css/header.css">
 <title>テキストリスト</title>
 </head>
 <body>
 <jsp:include page="header.jsp"/>
 	<div class="main">
 		<div class="title">
-			<h1>テキスト一覧</h1>
+			<h1>TextList</h1>
 		</div>
 		<s:if test = "textInfoAllList != null && textInfoAllList.size()>0">
 		<table border=1 class="textList">

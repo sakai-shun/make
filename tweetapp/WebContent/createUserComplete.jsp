@@ -5,14 +5,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="0;URL='LoginAction'"/>
+<meta http-equiv="refresh" content="0;URL='GoLoginAction'"/>
+<link rel="stylesheet" href="./css/header.css">
 <title>新規登録完了</title>
 </head>
 <body>
 <jsp:include page="header.jsp"/>
 	<div class="main">
 		<div class="title">
-			<h1>新規登録完了画面</h1>
+			<h1>CreateUserComplete</h1>
 		</div>
 		<div class="message">
 			<p>新規登録完了しました。</p>

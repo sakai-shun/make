@@ -40,6 +40,8 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				session.put("loginPass",loginPass);
 				session.put("userName", userInfoDTO.getUserName());
 				session.put("loginFlag", 1);
+				
+				session.remove("logoutFlag");
 			result = SUCCESS;
 
 		}else{

@@ -4,13 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="./css/header.css">
 <title>削除完了</title>
 </head>
 <body>
 <jsp:include page="header.jsp"/>
 	<div class="main">
 		<div class="title">
-			<h1>削除完了画面</h1>
+			<h1>DeleteComplete</h1>
 		</div>
 	</div>
 	<p>削除完了しました。</p>

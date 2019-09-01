@@ -5,17 +5,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="./css/header.css">
+<link rel="stylesheet" href="./css/style.css">
 <title>Home画面</title>
 </head>
 <body>
 
 	<jsp:include page="header.jsp" />
-	<div class="main">
-		<div class="title">
+	<div id="main">
+		<div class="title1">
 			<h1>Tweet App</h1>
-		</div>
-		<div class="content">
-			<p>つぶやこう</p><br>
 		</div>
 	</div>
 </body>

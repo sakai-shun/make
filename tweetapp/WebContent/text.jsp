@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="./css/header.css">
 <title>テキスト</title>
 </head>
 <body>
@@ -12,10 +13,10 @@
 	<div class="main">
 		<div class="title">
 		<s:if test="#session.updateFlag ==1">
-			<h1>編集画面</h1>
+			<h1>Edit</h1>
 		</s:if>
 		<s:else>
-			<h1>テキスト画面</h1>
+			<h1>Text</h1>
 		</s:else>
 		</div>
 			<s:if test = "textErrorMessageList!=null && textErrorMessageList.size()>0">
@@ -29,7 +30,7 @@
 			<s:form action="TextCompleteAction">
 				<s:textarea rows="10" cols="60" name="text" value="%{#session.text}" placeholder="ここに入力してください。"></s:textarea>
 				<s:hidden name="id" value="%{id}"/>
-				<s:submit value="投稿"/>
+				<s:submit value="Post"/>
 			</s:form>
 		</div>
 	</div>
