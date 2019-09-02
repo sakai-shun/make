@@ -6,9 +6,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="./css/header.css">
+<link rel="stylesheet" href="./css/style.css">
 <title>Login画面</title>
 </head>
 <body>
+	<script src="./js/login.js"></script>
 	<jsp:include page="header.jsp"/>
 	<div class="main">
 		<div class="title">
@@ -36,28 +38,18 @@
 				</div>
 			</div>
 		</s:if>
-		<s:form action="LoginAction">
-			<table>
-				<tr>
-					<td><label>ログインID</label></td>
-					<td><input type="text" name="loginId" value=""></td>
-				</tr>
-				<tr>
-					<td><label>パスワード</label></td>
-					<td><input type="text" name="loginPass" value=""></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td><s:submit value="Login"/></td>
-				</tr>
+		<div class="login_table">
+			<form id="form">
 
-			</table>
+				<div><input type="text" name="loginId" placeholder="ID"></div>
+				<div><input type="text" name="loginPass" placeholder="PASS"></div>
+				<div>
+					<button class="create_btn" onclick="goCreateUserAction()">CreateUser</button>
+					<button class="login_btn" onclick="goLoginAction()">Login</button>
+				</div>
 
-		</s:form>
-			<s:form action="CreateUserAction">
-				<s:submit value="CreateUser"/>
-			</s:form>
-
+			</form>
+		</div>
 	</div>
 
 </body>
