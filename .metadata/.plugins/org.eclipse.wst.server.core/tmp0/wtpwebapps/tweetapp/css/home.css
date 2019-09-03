@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+body{
+	background-image:url("background.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
+	
+	height:100%;
+}
+#main{
+	clear:both;
+	letter-spacing:8px;
+	text-align:center;
+	font-size:30px;
+	line-height:100%;
+}
+.title1 h1{
+	margin-top:15%;
+	color:white;
+	text-shadow:3px 3px 0 black;
+}

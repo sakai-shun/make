@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="./css/header.css">
+<link rel="stylesheet" href="./css/style.css">
 <title>新規登録</title>
 </head>
 <body>
@@ -21,17 +22,17 @@
 				</div>
 			</div>
 		</s:if>
-		<s:if test="loginPassErrorMessageList!=null && loginPassErrorMessageList.size()>0">
-			<div class="error">
-				<div class="error-message">
-					<s:iterator value="loginPassErrorMessageList"><s:property/><br></s:iterator>
-				</div>
-			</div>
-		</s:if>
 		<s:if test="userNameErrorMessageList!=null && userNameErrorMessageList.size()>0">
 			<div class="error">
 				<div class="error-message">
 					<s:iterator value="userNameErrorMessageList"><s:property/><br></s:iterator>
+				</div>
+			</div>
+		</s:if>
+		<s:if test="loginPassErrorMessageList!=null && loginPassErrorMessageList.size()>0">
+			<div class="error">
+				<div class="error-message">
+					<s:iterator value="loginPassErrorMessageList"><s:property/><br></s:iterator>
 				</div>
 			</div>
 		</s:if>

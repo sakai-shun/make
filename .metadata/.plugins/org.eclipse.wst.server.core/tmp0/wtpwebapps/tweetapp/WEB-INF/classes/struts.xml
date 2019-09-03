@@ -3,7 +3,7 @@
 "-//Apache SoftWare Foundation//DTD Struts Configuration 2.3//EN"
 "http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
-	<constant name="struts.devMode" value="true"/>
+	<constant value="simple" name="struts.ui.theme"/>
 	<package name="com.internousdev.tweetapp.action" extends="struts-default">
 		<action name="GoLoginAction" class="com.internousdev.tweetapp.action.GoLoginAction" method="execute">
 			<result name="success">login.jsp</result>

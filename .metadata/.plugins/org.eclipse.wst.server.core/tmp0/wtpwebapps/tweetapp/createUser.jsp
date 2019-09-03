@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="./css/header.css">
+<link rel="stylesheet" href="./css/style.css">
 <title>新規登録</title>
 </head>
 <body>
@@ -14,19 +15,10 @@
 		<div class="title">
 			<h2>CreateUser</h2>
 		</div>
-
-		<s:form action="CreateUserConfirmAction">
 		<s:if test="loginIdErrorMessageList!=null && userIdErrorMessageList.size()>0">
 			<div class="error">
 				<div class="error-message">
 					<s:iterator value="loginIdErrorMessageList"><s:property/><br></s:iterator>
-				</div>
-			</div>
-		</s:if>
-		<s:if test="loginPassErrorMessageList!=null && loginPassErrorMessageList.size()>0">
-			<div class="error">
-				<div class="error-message">
-					<s:iterator value="loginPassErrorMessageList"><s:property/><br></s:iterator>
 				</div>
 			</div>
 		</s:if>
@@ -37,6 +29,13 @@
 				</div>
 			</div>
 		</s:if>
+		<s:if test="loginPassErrorMessageList!=null && loginPassErrorMessageList.size()>0">
+			<div class="error">
+				<div class="error-message">
+					<s:iterator value="loginPassErrorMessageList"><s:property/><br></s:iterator>
+				</div>
+			</div>
+		</s:if>
 		<s:if test = "errorMessage!=''">
 			<div class="error">
 				<div class="error-message">
@@ -44,18 +43,19 @@
 				</div>
 			</div>
 		</s:if>
+		<s:form action="CreateUserConfirmAction">
 			<table>
 				<tr>
-					<td>ログインID</td>
-					<td><s:textfield name="loginId" value="%{#session.loginId}" placeholder="ログインID" class="text"/></td>
+					<th scope="row">ログインID</th>
+					<td><s:textfield name="loginId" value="%{#session.loginId}" placeholder="LoginId" class="text"/></td>
 				</tr>
 				<tr>
-					<td>パスワード</td>
-					<td><s:password name="loginPass" value="" placeholder="パスワード" class="text"/></td>
+					<th scope="row">ユーザー名</th>
+					<td><s:textfield name="userName" value="%{#session.userName}" placeholder="UserName" class="text"/></td>
 				</tr>
 				<tr>
-					<td>ユーザー名</td>
-					<td><s:textfield name="userName" value="%{#session.userName}" placeholder="ユーザー名" class="text"/></td>
+					<th scope="row">パスワード</th>
+					<td><s:password name="loginPass" value="" placeholder="Password" class="text"/></td>
 				</tr>
 			</table>
 			<div class="submit_btn">

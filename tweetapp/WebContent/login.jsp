@@ -38,7 +38,7 @@
 				</div>
 			</div>
 		</s:if>
-		<div class="login_table">
+		<div class="login_form">
 			<form id="form">
 
 				<div><input type="text" name="loginId" placeholder="ID"></div>
