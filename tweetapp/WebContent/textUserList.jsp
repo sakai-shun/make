@@ -30,7 +30,9 @@
 		</table>
 		</s:if>
 		<s:else>
+		<div class="info">
 			<p>つぶやきはありません。</p>
+		</div>
 		</s:else>
 
 	</div>

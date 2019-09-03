@@ -11,15 +11,16 @@ public class TextAction extends ActionSupport implements SessionAware{
 
 	private Map<String,Object>session;
 	private int id;
-
 	private String editFlag;
-	public String execute(){
 
+	public String execute(){
+		if(editFlag == "1") {
 			TextInfoDAO textInfoDAO = new TextInfoDAO();
 			TextInfoDTO textInfoDTO = new TextInfoDTO();
 			textInfoDTO = textInfoDAO.getTextInfoById(id);
 			session.put("text", textInfoDTO.getContent());
 			session.put("updateFlag", "1");
+		}
 
 		return SUCCESS;
 	}

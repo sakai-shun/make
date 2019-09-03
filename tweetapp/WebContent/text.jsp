@@ -14,10 +14,10 @@
 	<div class="main">
 		<div class="title">
 		<s:if test="#session.updateFlag ==1">
-			<h1>Edit</h1>
+			<h1>Text</h1>
 		</s:if>
 		<s:else>
-			<h1>Text</h1>
+			<h1>Edit</h1>
 		</s:else>
 		</div>
 			<s:if test = "textErrorMessageList!=null && textErrorMessageList.size()>0">
@@ -29,9 +29,13 @@
 			</s:if>
 		<div class="form">
 			<s:form action="TextCompleteAction">
-				<s:textarea rows="10" cols="60" name="text" value="%{#session.text}" placeholder="ここに入力してください。"></s:textarea>
-				<s:hidden name="id" value="%{id}"/>
-				<s:submit value="Post"/>
+				<s:textarea rows="10" cols="60" name="text" value="%{#session.text}" placeholder="投稿内容をここに入力してください。" class="text_area"></s:textarea>
+				<s:if test ="#session.updateFlag==1">
+					<s:hidden name="id" value="%{id}"/>
+				</s:if>
+				<div>
+					<s:submit value="Post" class="post_btn"/>
+				</div>
 			</s:form>
 		</div>
 	</div>
