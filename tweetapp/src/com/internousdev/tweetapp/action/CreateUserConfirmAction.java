@@ -17,7 +17,7 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 	private List<String> loginIdErrorMessageList;
 	private List<String> loginPassErrorMessageList;
 	private List<String> userNameErrorMessageList;
-	private String errorMessage;
+	private String errorMessage = null;
 
 
 	public String execute(){

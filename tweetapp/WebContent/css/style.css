@@ -59,3 +59,43 @@
 	background-color:#0000CD;
 	color:white;
 }
+.user_form,.confirm_form{
+	border: 1px solid black;
+	border-radius:3px;
+	width:50%;
+	margin:0 auto;
+	padding-top:30px;
+	padding-bottom:10px;
+	background-color:#F5F5F5;
+	text-align:center;
+}
+.user_table{
+	margin:0 auto;
+	padding-bottom:2%;
+}
+.user_table tr{
+	margin-bottom:10%;
+}
+.user_table th{
+	color:#222222;
+}
+.confirm_btn{
+	background-color:#0000CD;
+	color:white;
+	border-radius:4px;
+}
+.back_btn{
+	background-color:#CC0000;
+	color:white;
+	margin-top:2%;
+}
+.message{
+	background-color:;
+	color:;
+	font-size:;
+}
+.info{
+	background-color:;
+	color:;
+	font-size:;
+}

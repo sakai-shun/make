@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="./css/header.css">
+<link rel="stylesheet" href="./css/style.css">
 <title>削除完了</title>
 </head>
 <body>
@@ -14,6 +15,8 @@
 			<h1>DeleteComplete</h1>
 		</div>
 	</div>
-	<p>削除完了しました。</p>
+	<div class="message">
+		<p>削除完了しました。</p>
+	</div>
 </body>
 </html>

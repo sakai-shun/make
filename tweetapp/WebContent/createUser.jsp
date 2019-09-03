@@ -36,32 +36,35 @@
 				</div>
 			</div>
 		</s:if>
-		<s:if test = "errorMessage!=''">
+		<s:if test = "errorMessage!=null">
 			<div class="error">
 				<div class="error-message">
 					<s:property value="errorMessage"/>
 				</div>
 			</div>
 		</s:if>
+		<div class="user_form">
 		<s:form action="CreateUserConfirmAction">
-			<table>
+			<table class="user_table">
 				<tr>
-					<th scope="row">ログインID</th>
+					<th>ログインID</th>
 					<td><s:textfield name="loginId" value="%{#session.loginId}" placeholder="LoginId" class="text"/></td>
 				</tr>
 				<tr>
-					<th scope="row">ユーザー名</th>
+					<th>ユーザー名</th>
 					<td><s:textfield name="userName" value="%{#session.userName}" placeholder="UserName" class="text"/></td>
 				</tr>
 				<tr>
-					<th scope="row">パスワード</th>
+					<th>パスワード</th>
 					<td><s:password name="loginPass" value="" placeholder="Password" class="text"/></td>
 				</tr>
 			</table>
 			<div class="submit_btn">
-				<s:submit value="Confirm" class="btn"/>
+				<s:submit value="Confirm" class="confirm_btn"/>
 			</div>
+
 		</s:form>
+		</div>
 	</div>
 </body>
 </html>

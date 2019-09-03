@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="./css/header.css">
+<link rel="stylesheet" href="./css/style.css">
 <title>新規登録確認</title>
 </head>
 <body>
@@ -14,27 +15,29 @@
 		<div class="title">
 			<h1>CreateUserConfirm</h1>
 		</div>
-		<table>
-			<tr>
-				<td><label>ログインID</label></td>
-				<td><s:property value="#session.loginId"/></td>
-			</tr>
-			<tr>
-				<td><label>パスワード</label></td>
-				<td><s:property value="#session.loginPass"/></td>
-			</tr>
-			<tr>
-				<td><label>ユーザー名</label></td>
-				<td><s:property value="#session.userName"/></td>
-			</tr>
-		</table>
-		<s:form action="CreateUserCompleteAction">
-			<s:submit value="Create"/>
-		</s:form>
-		<s:form action="CreateUserAction">
-			<s:submit value="Back"/>
-			<s:hidden name="backFlag" value="1"/>
-		</s:form>
+		<div class="confirm_form">
+			<table class="user_table">
+				<tr>
+					<td><label>ログインID:</label></td>
+					<td><s:property value="#session.loginId"/></td>
+				</tr>
+				<tr>
+					<td><label>パスワード:</label></td>
+					<td><s:property value="#session.loginPass"/></td>
+				</tr>
+				<tr>
+					<td><label>ユーザー名:</label></td>
+					<td><s:property value="#session.userName"/></td>
+				</tr>
+			</table>
+			<s:form action="CreateUserCompleteAction">
+				<s:submit value="Create" class="create_btn"/>
+			</s:form>
+			<s:form action="CreateUserAction">
+				<s:submit value="Back" class="back_btn"/>
+				<s:hidden name="backFlag" value="1"/>
+			</s:form>
+		</div>
 	</div>
 </body>
 </html>
